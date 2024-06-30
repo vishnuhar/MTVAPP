@@ -18,7 +18,7 @@
         android:theme="@style/Theme.MTVAPP">
 
         <activity
-            android:name=".youtubesection.YoutubePlay"
+            android:name="com.vishnu.mtvapp.main.youtubesection.YoutubePlay"
             android:exported="false" />
         <activity
             android:name=".PlayerBundlesActivity"

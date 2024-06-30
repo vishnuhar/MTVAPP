@@ -1,4 +1,4 @@
-package com.vishnu.mtvapp.main.videosection
+package com.vishnu.mtvapp.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

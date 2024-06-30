@@ -15,7 +15,6 @@ import androidx.leanback.widget.ListRow
 import androidx.leanback.widget.ListRowPresenter
 import androidx.leanback.widget.OnItemViewClickedListener
 import androidx.leanback.widget.OnItemViewSelectedListener
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.SimpleTarget
@@ -25,14 +24,11 @@ import com.vishnu.mtvapp.utils.Constants
 import com.vishnu.mtvapp.PlayerBundlesActivity
 import com.vishnu.mtvapp.R
 import com.vishnu.mtvapp.main.imagesection.imagecardpresenter.ImagePresenter
-import com.vishnu.mtvapp.main.imagesection.ImagesViewModel
 import com.vishnu.mtvapp.main.imagesection.model.Image
-import com.vishnu.mtvapp.main.videosection.VideosListMainViewModel
 import com.vishnu.mtvapp.main.videosection.model.Video
-import com.vishnu.mtvapp.youtubesection.YouTubePlayerViewModel
-import com.vishnu.mtvapp.youtubesection.YoutubeCardPresenter
-import com.vishnu.mtvapp.youtubesection.YoutubePlay
-import com.vishnu.mtvapp.youtubesection.model.YouTube
+import com.vishnu.mtvapp.main.youtubesection.YoutubeCardPresenter
+import com.vishnu.mtvapp.main.youtubesection.YoutubePlay
+import com.vishnu.mtvapp.main.youtubesection.model.YouTube
 
 class MainFragment : BrowseSupportFragment() {
 

@@ -1,9 +1,9 @@
-package com.vishnu.mtvapp.youtubesection
+package com.vishnu.mtvapp.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.vishnu.mtvapp.youtubesection.model.YouTube
+import com.vishnu.mtvapp.main.youtubesection.model.YouTube
 
 class YouTubePlayerViewModel : ViewModel(){
 

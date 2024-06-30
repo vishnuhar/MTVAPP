@@ -1,4 +1,4 @@
-package com.vishnu.mtvapp.youtubesection
+package com.vishnu.mtvapp.main.youtubesection
 
 import android.os.Build
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.leanback.widget.ImageCardView
 import androidx.leanback.widget.Presenter
 import com.bumptech.glide.Glide
 import com.vishnu.mtvapp.R
-import com.vishnu.mtvapp.youtubesection.model.YouTube
+import com.vishnu.mtvapp.main.youtubesection.model.YouTube
 
 class YoutubeCardPresenter : Presenter() {
 

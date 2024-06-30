@@ -1,4 +1,4 @@
-package com.vishnu.mtvapp.youtubesection
+package com.vishnu.mtvapp.main.youtubesection
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
