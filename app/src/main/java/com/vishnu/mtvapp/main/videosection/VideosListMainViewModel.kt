@@ -15,7 +15,7 @@ class VideosListMainViewModel : ViewModel() {
 
     private fun loadVideos(): List<Video> {
         return listOf(
-            Video("1", "Stranger Thing",
+            Video("1", "Stranger Things",
                 "Finn Wolfhard said that 'Stranger Things' Season 5 may arrive in 2025 and he would be 22 by that time.",
                 "https://www.classicgaming.cc/classics/dragons-lair/files/videos/stranger-things-season-2-trailer.mp4",
                 "https://www.mordeo.org/files/uploads/2022/05/Stranger-Things-Season-4-All-Characters-Poster-4K-Ultra-HD-Mobile-Wallpaper-scaled.jpg",
