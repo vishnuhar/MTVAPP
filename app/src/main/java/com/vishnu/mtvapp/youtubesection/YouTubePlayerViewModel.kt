@@ -3,7 +3,6 @@ package com.vishnu.mtvapp.youtubesection
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.vishnu.mtvapp.main.videosection.model.Video
 import com.vishnu.mtvapp.youtubesection.model.YouTube
 
 class YouTubePlayerViewModel : ViewModel(){

@@ -1,6 +1,6 @@
 package com.vishnu.mtvapp.main
 
-import android.content.Context
+
 import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.net.Uri
@@ -89,19 +89,19 @@ class MainFragment : BrowseSupportFragment() {
 
         val imagesHeader = HeaderItem(1, getString(R.string.images_section))
         val imagesAdapter = ArrayObjectAdapter(ImagePresenter())
-        imagesViewModel.images.observe(viewLifecycleOwner, Observer { images ->
+        imagesViewModel.images.observe(viewLifecycleOwner) { images ->
             imagesAdapter.clear()
             images.forEach { image ->
                 imagesAdapter.add(image)
             }
-        })
+        }
         rowsAdapter.add(ListRow(imagesHeader, imagesAdapter))
 
 
         val youTubeHeader = HeaderItem(2, getString(R.string.youtube_section))
 
         val youTubeAdapter = ArrayObjectAdapter(YoutubeCardPresenter())
-        youTubePlayerViewModel.youTube.observe(viewLifecycleOwner, Observer { playlist ->
+        youTubePlayerViewModel.youTube.observe(viewLifecycleOwner, { playlist ->
             youTubeAdapter.clear()
             playlist.forEach { video ->
                 youTubeAdapter.add(video)
