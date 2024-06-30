@@ -3,7 +3,6 @@ package com.vishnu.mtvapp.main
 
 import android.content.Intent
 import android.graphics.drawable.Drawable
-import android.net.Uri
 import android.os.Bundle
 import androidx.core.content.ContextCompat
 import androidx.leanback.app.BackgroundManager
@@ -32,6 +31,7 @@ import com.vishnu.mtvapp.main.videosection.VideosListMainViewModel
 import com.vishnu.mtvapp.main.videosection.model.Video
 import com.vishnu.mtvapp.youtubesection.YouTubePlayerViewModel
 import com.vishnu.mtvapp.youtubesection.YoutubeCardPresenter
+import com.vishnu.mtvapp.youtubesection.YoutubePlay
 import com.vishnu.mtvapp.youtubesection.model.YouTube
 
 class MainFragment : BrowseSupportFragment() {
@@ -68,21 +68,21 @@ class MainFragment : BrowseSupportFragment() {
     }
 
     private fun initializeViewModels() {
-        videosListMainViewModel = ViewModelProvider(this).get(VideosListMainViewModel::class.java)
-        imagesViewModel = ViewModelProvider(this).get(ImagesViewModel::class.java)
-        youTubePlayerViewModel = ViewModelProvider(this).get(YouTubePlayerViewModel::class.java)
+        videosListMainViewModel = ViewModelProvider(this)[VideosListMainViewModel::class.java]
+        imagesViewModel = ViewModelProvider(this)[ImagesViewModel::class.java]
+        youTubePlayerViewModel = ViewModelProvider(this)[YouTubePlayerViewModel::class.java]
     }
 
     private fun loadRows() {
 
         val videosHeader = HeaderItem(0, getString(R.string.videos_section))
         val videoAdapter = ArrayObjectAdapter(CardPresenter())
-        videosListMainViewModel.videos.observe(viewLifecycleOwner, Observer { videos ->
+        videosListMainViewModel.videos.observe(viewLifecycleOwner) { videos ->
             videoAdapter.clear()
             videos.forEach { video ->
                 videoAdapter.add(video)
             }
-        })
+        }
         rowsAdapter.add(ListRow(videosHeader, videoAdapter))
 
 
@@ -101,12 +101,12 @@ class MainFragment : BrowseSupportFragment() {
         val youTubeHeader = HeaderItem(2, getString(R.string.youtube_section))
 
         val youTubeAdapter = ArrayObjectAdapter(YoutubeCardPresenter())
-        youTubePlayerViewModel.youTube.observe(viewLifecycleOwner, { playlist ->
+        youTubePlayerViewModel.youTube.observe(viewLifecycleOwner) { playlist ->
             youTubeAdapter.clear()
             playlist.forEach { video ->
                 youTubeAdapter.add(video)
             }
-        })
+        }
 
 
         rowsAdapter.add(ListRow(youTubeHeader, youTubeAdapter))
@@ -180,7 +180,10 @@ class MainFragment : BrowseSupportFragment() {
                 }
 
                 if (item is YouTube) {
-                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(item.videoId))
+                    val imageDetailBundle = Bundle()
+                    imageDetailBundle.putString(Constants.YOUTUBE_URL_KEY, item.videoId)
+                    val intent = Intent(requireActivity(), YoutubePlay::class.java)
+                    intent.putExtras(imageDetailBundle)
                     startActivity(intent)
                 }
 
