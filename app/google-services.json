@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1013908007265",
+    "project_id": "mtvapp-dcd28",
+    "storage_bucket": "mtvapp-dcd28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013908007265:android:1d02741514acce99a8bd20",
+        "android_client_info": {
+          "package_name": "com.vishnu.mtvapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9bM7CkAiDQDT70WHBFljyXQS6jYpnJEQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

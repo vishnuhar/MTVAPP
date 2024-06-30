@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Video Surface for Playback -->
+        <SurfaceView
+            android:id="@+id/video_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Play/Pause Button -->
+        <ImageButton
+            android:id="@+id/play_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_play_arrow_24"
+            android:layout_centerInParent="true"
+            android:background="@null" />
+
+        <!-- Film Details Container -->
+        <LinearLayout
+            android:id="@+id/film_details_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/black"
+            android:padding="16dp">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/video_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@android:color/white"
+                android:text="@{viewModel.videoDetail.title}"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/video_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:text="@{viewModel.videoDetail.description}"/>
+
+            <!-- Play Time -->
+            <TextView
+                android:id="@+id/play_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:text="00:00 / 00:00"/>
+
+            <!-- Playback Seek Bar -->
+            <SeekBar
+                android:id="@+id/playback_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Playback Controls -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Rewind Button -->
+                <ImageButton
+                    android:id="@+id/rewind_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_fast_rewind_24"
+                    android:background="@null"
+                    android:layout_marginEnd="16dp"/>
+
+                <!-- Fast Forward Button -->
+                <ImageButton
+                    android:id="@+id/fast_forward_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_fast_forward_24"
+                    android:background="@null"/>
+
+                <!-- Volume Button -->
+                <ImageButton
+                    android:id="@+id/volume_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_volume_down_24"
+                    android:background="@null"
+                    android:layout_marginStart="16dp"/>
+
+                <!-- Fullscreen Button -->
+                <ImageButton
+                    android:id="@+id/fullscreen_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_fullscreen_24"
+                    android:background="@null"
+                    android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
