@@ -27,11 +27,10 @@ class YoutubeCardPresenter : Presenter() {
         val youTube = item as YouTube
         val cardView = viewHolder.view as ImageCardView
         cardView.titleText = youTube.title
+        cardView.contentText = youTube.desc
 
-        // Set the main image dimensions
+
         cardView.setMainImageDimensions(CARD_WIDTH, CARD_HEIGHT)
-
-        // Load the thumbnail image using Glide
         Glide.with(cardView.context)
             .load(youTube.thumbnailUrl)
             .centerCrop()

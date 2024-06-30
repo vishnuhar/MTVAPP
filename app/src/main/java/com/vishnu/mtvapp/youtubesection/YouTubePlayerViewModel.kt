@@ -16,8 +16,8 @@ class YouTubePlayerViewModel : ViewModel(){
 
     private fun loadVideos(): List<YouTube> {
         return listOf(
-            YouTube("https://cdn.pixabay.com/photo/2021/09/11/18/21/youtube-6616310_1280.png","https://www.youtube.com/watch?v=gslccIy0E6M","YouTube",
-                "https://mrwallpaper.com/images/high/black-youtube-banner-bhadojaxac5w2ygv.webp")
+            YouTube("https://logowik.com/content/uploads/images/373_you_tube_new.jpg","https://www.youtube.com/watch?v=gslccIy0E6M","The Daily Aviation","\"US Pilots Rush for Their Massive Stealth Bombers and Takeoff at Full Throttl",
+                "https://static1.simpleflyingimages.com/wordpress/wp-content/uploads/2024/04/ecodemonstrator_explorer787_boeing-1.jpg?q=49&fit=contain&w=1140&h=&dpr=2")
         )
 
     }

@@ -19,14 +19,4 @@ class MainActivity : FragmentActivity() {
         }
     }
 
-//    override fun onBackPressed() {
-//        val fragment = supportFragmentManager.findFragmentById(R.id.main_browse_fragment)
-//        if (fragment is VideoDetailFragment) {
-//            if (!fragment.onBackPressed()) {
-//                super.onBackPressed()
-//            }
-//        } else {
-//            super.onBackPressed()
-//        }
-//    }
 }
