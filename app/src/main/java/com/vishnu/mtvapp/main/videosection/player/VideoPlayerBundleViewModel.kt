@@ -4,11 +4,10 @@ import android.os.Bundle
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+
 import com.vishnu.mtvapp.utils.Constants
 import com.vishnu.mtvapp.main.videosection.model.Video
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+
 
 class VideoPlayerBundleViewModel : ViewModel() {
 
