@@ -19,7 +19,6 @@ class ImagesViewModel : ViewModel() {
         return listOf(
             Image("1", "Image 1", "Description 1", "https://commondatastorage.googleapis.com/android-tv/Sample%20videos/Zeitgeist/Zeitgeist%202010_%20Year%20in%20Review/card.jpg"),
             Image("2", "Image 2", "Description 2", "https://commondatastorage.googleapis.com/android-tv/Sample%20videos/Demo%20Slam/Google%20Demo%20Slam_%2020ft%20Search/card.jpg")
-            // Add more image items here
         )
     }
 }

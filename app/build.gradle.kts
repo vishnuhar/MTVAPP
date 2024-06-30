@@ -60,11 +60,6 @@ dependencies {
     implementation (libs.exoplayer.smoothstreaming)
     implementation(libs.androidx.media3.exoplayer)
 
-//
-//    implementation ("com.google.api-client:google-api-client-android:1.32.1")
-//    implementation ("com.google.oauth-client:google-oauth-client-jetty:1.32.1")
-//    implementation (libs.google.api.services.youtube.vv3rev1831220)
-
 
 
 

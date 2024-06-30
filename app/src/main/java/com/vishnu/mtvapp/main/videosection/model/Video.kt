@@ -5,5 +5,6 @@ data class Video(
     val title: String,
     val description: String,
     val videoUrl:String,
-    val thumbnailUrl: String?
+    val thumbnailUrl: String?,
+    val backgroundUrl: String?
 )
