@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.vishnu.mtvapp.utils.Constants
 import com.vishnu.mtvapp.main.videosection.model.Video
-import com.vishnu.mtvapp.old.VideoDetail
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
