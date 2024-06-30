@@ -1,10 +1,13 @@
 package com.vishnu.mtvapp.main.videosection.player
 
+import android.content.Context
+import android.media.AudioManager
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 
@@ -20,7 +23,7 @@ class VideoPlayerFragment : Fragment() {
     private var player: SimpleExoPlayer? = null
 
     private lateinit var viewModel: VideoPlayerBundleViewModel
-
+    private lateinit var tvTitle: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,8 +50,33 @@ class VideoPlayerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         playerView = view.findViewById(R.id.player_view)
 
+        tvTitle = view.findViewById(R.id.tv_title)
+
+
         initializePlayer()
+        observeTitle()
+        titleVisible()
+
     }
+
+    private  fun observeTitle(){
+        viewModel.detailData.observe(viewLifecycleOwner) { title->
+            tvTitle.text = title.title
+
+        }
+    }
+
+ private fun titleVisible(){
+        playerView.setControllerVisibilityListener { visibility ->
+            if (visibility == View.VISIBLE) {
+                tvTitle.visibility = View.VISIBLE
+            } else {
+                tvTitle.visibility = View.GONE
+            }
+        }
+    }
+
+
 
     override fun onStart() {
         super.onStart()
@@ -95,6 +123,7 @@ class VideoPlayerFragment : Fragment() {
 
         }
     }
+
 
     private fun releasePlayer() {
         player?.release()
