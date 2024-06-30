@@ -28,6 +28,17 @@ class VideosListMainViewModel : ViewModel() {
                  "https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/01/dragon-s-lair-cover.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5")
 
 
+            ,
+
+            Video("3", "Action Movie",
+                "A powerful, dark and intense title design, suitable for Hollywood type of movie projects, useful for drama, fantasy, thriller, mystery, or superhero Sci-Fi movie and tv series promo, commercial or tv spot.",
+                "https://previews.customer.envatousercontent.com/h264-video-previews/1c67bf17-b0b0-444d-be9a-7369313bda2a/599548.mp4?_=2",
+                "https://cdn.daily-sun.com/public/news_images/2020/05/05/Daily-sun-25.jpg",
+                "https://cdn.daily-sun.com/public/news_images/2020/05/05/Daily-sun-25.jpg"),
+
         )
+
+
+
     }
 }
